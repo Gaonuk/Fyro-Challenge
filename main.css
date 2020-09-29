@@ -73,6 +73,7 @@ html {
     border-radius: 15px;
     width: 500px;
     font-size: 14px;
+    margin-left: 50px;
     
 }
 
@@ -107,6 +108,7 @@ html {
 }
 
 .loading-bar{
+    display: flex;
     height: 15px;
     position: relative;
     background: var(--neutral-very-dark);
@@ -116,7 +118,7 @@ html {
     box-shadow: inset o -1px 1px rgba(255, 255, 255, 0.3);
 }
 
-.loading-bar > span {
+.bar {
     display: block;
     height: 100%;
     border-top-right-radius: 8px;
@@ -131,11 +133,14 @@ html {
 }
 
 .punto {
-    height: 15px;
-    width: 15px;
-    background-color: #bbb;
+    height: 13px;
+    width: 13px;
+    background-color: #ffffff;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
+    margin-left: -14px;
+    margin-top: 1px;
+    z-index: 1;
 }
 
 .points {
@@ -144,3 +149,40 @@ html {
     font-family: "Raleway";
     font-weight: var(--weight2);
 }
+
+.bubble {
+    width: 150px;
+    margin: 50px auto;
+    background: #FFFF;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-family: "Raleway";
+    position: relative;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: 0px;
+    margin-left: 380px;
+    margin-bottom: -50px;
+}
+
+.bubble > strong {
+    font-size: 40px;
+    padding-right: 10px;
+    font-weight: var(--weight2);
+}
+
+.sb4:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #ffffff;
+    border-top: 10px solid #ffffff;
+    border-bottom: 10px solid transparent;
+    right: 0px;
+    bottom: -19px;
+  }
